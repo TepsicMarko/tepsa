@@ -1,13 +1,18 @@
 {
-  "name": "use-paginated-query",
-  "version": "0.0.1",
+  "name": "@tepsa/use-paginated-query",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "repository": "https://github.com/TepsicMarko/tepsa",
+  "repository": {
+    "url": "https://github.com/TepsicMarko/tepsa.git",
+    "directory": "packages/use-paginated-query",
+    "type": "git"
+  },
   "license": "MIT",
   "scripts": {
     "build": "npx tsup src/index.ts --format cjs,esm --dts",
+    "publish": "npm publish -access public",
     "lint": "tsc"
   },
   "dependencies": {
@@ -16,5 +21,12 @@
   },
   "devDependencies": {
     "@types/react": "^18.2.33"
+  },
+  "author": {
+    "name": "Marko Tepsic",
+    "email": "tepsic.marko.dev@gmail.com"
+  },
+  "publishConfig": {
+    "@tepsa:registry": "https://registry.npmjs.org"
   }
 }

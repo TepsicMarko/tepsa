@@ -1,13 +1,16 @@
 {
-  "name": "tepsa",
-  "version": "0.0.1",
+  "name": "root",
+  "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/TepsicMarko/tepsa",
+  "repository": {
+    "url": "https://github.com/TepsicMarko/tepsa",
+    "type": "git"
+  },
   "author": "TepsicMarko <markotepshic@gmail.com>",
   "license": "MIT",
-  "private": true,
   "scripts": {
-    "build": "yarn workspaces foreach --all run build"
+    "build": "yarn workspaces foreach --all run build",
+    "publish": "yarn workspaces foreach --all run publish"
   },
   "workspaces": [
     "packages/*"
