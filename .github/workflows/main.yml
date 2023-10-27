@@ -13,9 +13,6 @@ jobs:
         with:
           node-version: 18
       - name: Install Dependencies
-        run: npm install
+        run: yarn install
       - name: Build
-        run: |
-          for package in $(ls packages); do
-            (cd packages/$package && npm run build)
-          done
+        run: yarn run build

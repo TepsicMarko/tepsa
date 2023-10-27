@@ -16,6 +16,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Install Dependencies
+        run: yarn install
+      - name: Build
+        run: yarn run build
       - name: Authenticate with npm
         run: npm set "//registry.npmjs.org/:_authToken" ${{ secrets.NPM_TOKEN}}
       - name: Authenticate with github
