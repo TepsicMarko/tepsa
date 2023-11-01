@@ -13,7 +13,8 @@
     "publish": "yarn workspaces foreach --all run publish"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "!packages/test"
   ],
   "devDependencies": {
     "tsup": "^7.2.0",
